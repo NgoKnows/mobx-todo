@@ -1,15 +1,16 @@
-import { observable, computed, autorun, action } from 'mobx';
+import { observable, action } from 'mobx';
+import Todo from '../models/Todo';
 
 class TodoStore {
-    @observable todos = [{ text: 'hi', completed: true }];
+    @observable todos = [];
     @observable inputValue = '';
 
     @action
     addTodo() {
-        this.todos.push({
+        this.todos.push(new Todo({
             text: this.inputValue,
             completed: false
-        });
+        }));
 
         this.inputValue = '';
     }

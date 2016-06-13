@@ -6,7 +6,9 @@ import Input from './Input';
 @observer
 export default class TodoApp extends Component {
     static defaultProps = {};
-    props: {};
+    props: {
+        store: Object
+    };
     state: void;
 
     render() {
@@ -46,6 +48,6 @@ const STYLES = {
     title : {
         margin         : '12px',
         textDecoration : 'underline',
-        fontSize: 36
+        fontSize       : 36
     }
 }
