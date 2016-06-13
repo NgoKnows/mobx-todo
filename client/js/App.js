@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DevTools from 'mobx-react-devtools';
 
 import TodoStore from './stores/TodoStore';
 import TodoApp from './components/TodoApp';
@@ -14,6 +15,7 @@ export default class App extends Component {
         return (
             <div style={STYLES}>
                 <TodoApp store={TodoStore} />
+                <DevTools />
             </div>
         );
     }
