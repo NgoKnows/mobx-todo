@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import TodoStore from './stores/TodoStore';
+import TodoApp from './components/TodoApp';
+
 export default class App extends Component {
     static defaultProps = {};
     props: {};
@@ -10,14 +13,14 @@ export default class App extends Component {
 
         return (
             <div style={STYLES}>
+                <TodoApp store={TodoStore} />
             </div>
         );
     }
 }
 
 const STYLES = {
-    height: 1000,
-    width: 1500,
     fontFamily: 'Lato',
-    margin: 100
+    padding: 50,
+    backgroundColor: 'white'
 };
